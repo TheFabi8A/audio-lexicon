@@ -1,5 +1,3 @@
 export default function useFetch() {
-  return (
-    <div>useFetch</div>
-  )
+  return <div>useFetch</div>;
 }
