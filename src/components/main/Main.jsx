@@ -146,7 +146,6 @@ const Divider = styled.hr`
 
 export default function Main() {
   const { dataWord, selectedFont } = useContext(DictionaryContext);
-  console.log(dataWord);
 
   let word = "";
   let phonetic = "";

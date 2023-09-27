@@ -1,8 +1,8 @@
 @font-face {
   font-family: "Lora Regular";
-  src: url("assets/fonts/Lora-Regular.woff2") format("woff2"),
-    url("assets/fonts/Lora-Regular.woff") format("woff"),
-    url("assets/fonts/Lora-Regular.ttf") format("truetype");
+  src: url("fonts/Lora-Regular.woff2") format("woff2"),
+    url("fonts/Lora-Regular.woff") format("woff"),
+    url("fonts/Lora-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -10,9 +10,9 @@
 
 @font-face {
   font-family: "Lora Bold";
-  src: url("assets/fonts/Lora-Bold.woff2") format("woff2"),
-    url("assets/fonts/Lora-Bold.woff") format("woff"),
-    url("assets/fonts/Lora-Bold.ttf") format("truetype");
+  src: url("fonts/Lora-Bold.woff2") format("woff2"),
+    url("fonts/Lora-Bold.woff") format("woff"),
+    url("fonts/Lora-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -20,9 +20,9 @@
 
 @font-face {
   font-family: "Lora BoldItalic";
-  src: url("assets/fonts/Lora-BoldItalic.woff2") format("woff2"),
-    url("assets/fonts/Lora-BoldItalic.woff") format("woff"),
-    url("assets/fonts/Lora-BoldItalic.ttf") format("truetype");
+  src: url("fonts/Lora-BoldItalic.woff2") format("woff2"),
+    url("fonts/Lora-BoldItalic.woff") format("woff"),
+    url("fonts/Lora-BoldItalic.ttf") format("truetype");
   font-weight: bold;
   font-style: italic;
   font-display: swap;
@@ -30,9 +30,9 @@
 
 @font-face {
   font-family: "Inter Regular";
-  src: url("assets/fonts/Inter-Regular.woff2") format("woff2"),
-    url("assets/fonts/Inter-Regular.woff") format("woff"),
-    url("assets/fonts/Inter-Regular.ttf") format("truetype");
+  src: url("fonts/Inter-Regular.woff2") format("woff2"),
+    url("fonts/Inter-Regular.woff") format("woff"),
+    url("fonts/Inter-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -40,9 +40,9 @@
 
 @font-face {
   font-family: "Inter Bold";
-  src: url("assets/fonts/Inter-Bold.woff2") format("woff2"),
-    url("assets/fonts/Inter-Bold.woff") format("woff"),
-    url("assets/fonts/Inter-Bold.ttf") format("truetype");
+  src: url("fonts/Inter-Bold.woff2") format("woff2"),
+    url("fonts/Inter-Bold.woff") format("woff"),
+    url("fonts/Inter-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -50,9 +50,9 @@
 
 @font-face {
   font-family: "Inconsolata Bold";
-  src: url("assets/fonts/Inconsolata-Bold.woff2") format("woff2"),
-    url("assets/fonts/Inconsolata-Bold.woff") format("woff"),
-    url("assets/fonts/Inconsolata-Bold.ttf") format("truetype");
+  src: url("fonts/Inconsolata-Bold.woff2") format("woff2"),
+    url("fonts/Inconsolata-Bold.woff") format("woff"),
+    url("fonts/Inconsolata-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -60,9 +60,9 @@
 
 @font-face {
   font-family: "Inconsolata Regular";
-  src: url("assets/fonts/Inconsolata-Regular.woff2") format("woff2"),
-    url("assets/fonts/Inconsolata-Regular.woff") format("woff"),
-    url("assets/fonts/Inconsolata-Regular.ttf") format("truetype");
+  src: url("fonts/Inconsolata-Regular.woff2") format("woff2"),
+    url("fonts/Inconsolata-Regular.woff") format("woff"),
+    url("fonts/Inconsolata-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
