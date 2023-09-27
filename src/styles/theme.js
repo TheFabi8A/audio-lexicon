@@ -12,6 +12,7 @@ const darkStrokeLogo = "#ffffff";
 
 export const lightTheme = {
   primaryColor: "#A445ED",
+  secondaryColor: "#f4f4f4",
   bodyColor: lightBodyColor,
   textColor: lightTextColor,
   strokeLogo: lightStrokeLogo,
@@ -20,6 +21,7 @@ export const lightTheme = {
 
 export const darkTheme = {
   primaryColor: "#A445ED",
+  secondaryColor: "#1f1f1f",
   bodyColor: darkBodyColor,
   textColor: darkTextColor,
   strokeLogo: darkStrokeLogo,

@@ -1,8 +1,9 @@
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "./GlobalStyle";
 import { darkTheme, lightTheme } from "./styles/theme";
-import AppContainer from "./AppContainer";
 import useDarkMode from "./hooks/useDarkMode";
+import Header from "./components/header/Header";
+import Main from "./components/main/Main";
 
 export default function App() {
   const [theme, themeToggler] = useDarkMode();
@@ -13,7 +14,8 @@ export default function App() {
       <ThemeProvider theme={themeMode}>
         <div className="app">
           <GlobalStyle />
-          <AppContainer theme={theme} themeToggler={themeToggler} />
+          <Header theme={theme} themeToggler={themeToggler} />
+          <Main />
         </div>
       </ThemeProvider>
     </>

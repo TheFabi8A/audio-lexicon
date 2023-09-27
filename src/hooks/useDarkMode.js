@@ -2,14 +2,22 @@ import { useState, useEffect } from "react";
 
 const useDarkMode = () => {
   const [theme, setTheme] = useState(() => {
+    const html = document.documentElement;
+
     const userTheme = localStorage.getItem("theme");
 
     const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
       .matches
       ? "dark"
       : "light";
+
+    userTheme === "dark" || (!userTheme && systemTheme === "dark")
+      ? (html.style.background = "#000")
+      : (html.style.background = "#fff");
+
     return userTheme || systemTheme;
   });
+
   const setMode = (mode) => {
     window.localStorage.setItem("theme", mode);
     setTheme(mode);
