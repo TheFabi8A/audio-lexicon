@@ -7,12 +7,18 @@ import { DictionaryContext } from "../../context/DictionaryProvider";
 
 const HeaderContainer = styled.header`
   margin: 0 auto;
-  max-width: 768px;
+  display: flex;
+  justify-content: center;
   width: 100%;
-  height: max-content;
+  position: fixed;
+  top: 0;
+  background: ${({ theme }) => theme.bodyColor};
+  transition: background 250ms ease-in-out;
 `;
 
 const Navbar = styled.nav`
+  max-width: 768px;
+  width: 100%;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -26,12 +32,12 @@ const NavbarContent = styled.div`
   gap: 1rem;
 `;
 
-const Divider = styled.span`
+const Divider = styled.hr`
   align-self: stretch;
-  width: 1px;
+  width: 2px;
   height: inherit;
-  background-color: ${({ theme }) => theme.textColorInverted};
-  transition: background 250ms ease-in-out;
+  border: 2px solid ${({ theme }) => theme.secondaryColor};
+  transition: border 250ms ease-in-out;
 `;
 
 const SearchContainer = styled.label`

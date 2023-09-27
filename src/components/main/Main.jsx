@@ -6,7 +6,7 @@ import { PlayIcon } from "../icons";
 const MainContainer = styled.main`
   max-width: 768px;
   margin: 0 auto;
-  padding: 2rem 1rem 1rem;
+  padding: 11.25rem 1rem 1rem;
   color: ${({ theme }) => theme.textColor};
   transition: color 250ms ease-in-out;
 `;
