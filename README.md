@@ -2,8 +2,6 @@
 
 This is a solution to the [Dictionary Web App - Frontend Mentor](https://www.frontendmentor.io/challenges/dictionary-web-app-h5wwnyuKFL).
 
-[![Vercel](https://img.shields.io/badge/site_live-000?style=for-the-badge&logo=vercel&logoColor=black&labelColor=fff)](https://dictionary-web-app-thefabi8a.vercel.app/)
-
 ## Table of contents
 
 - [Overview](#overview)
@@ -26,7 +24,7 @@ Your users should be able to:
 - Switch between light and dark themes. ✅
 - View the optimal layout for the interface depending on their device's screen size. ✅
 - See hover and focus states for all interactive elements on the page. ✅
-- **Bonus**: Have the correct color scheme chosen for them based on their computer preferences. _Hint_: Research `prefers-color-scheme` ✅
+- **Bonus**: Have the correct color scheme chosen for them based on their computer preferences. ✅
 
 ### Screenshots
 
@@ -35,7 +33,9 @@ Your users should be able to:
 
 ### Links
 
-- Solution URL: [Solution in FrontendMentor ( Not available )]()
+[![Vercel](https://img.shields.io/badge/site_live-000?style=for-the-badge&logo=vercel&logoColor=black&labelColor=fff)](https://dictionary-web-app-thefabi8a.vercel.app/)
+
+[![FrontendMentor](https://img.shields.io/badge/solution_(_not_available_)-f00?style=for-the-badge&logo=frontendmentor&logoColor=white&labelColor=101010)]()
 
 ### Built with
 
