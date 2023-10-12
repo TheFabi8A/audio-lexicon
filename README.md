@@ -40,7 +40,9 @@ Your users should be able to:
 ### Built with
 
 [![React](https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white&labelColor=101010)]()
+
 [![Styled Components](https://img.shields.io/badge/styled_components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white&labelColor=101010)]()
+
 [![CSS](https://img.shields.io/badge/css3-1572B6?style=for-the-badge&logo=css3&logoColor=white&labelColor=101010)]()
 
 ## Author
