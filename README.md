@@ -1,4 +1,4 @@
-# Dictionary Web App
+# Audio Lexicon
 
 This is a solution to the [Dictionary Web App - Frontend Mentor](https://www.frontendmentor.io/challenges/dictionary-web-app-h5wwnyuKFL).
 
@@ -33,7 +33,7 @@ Your users should be able to:
 
 ### Links
 
-[![Vercel](https://img.shields.io/badge/site_live-000?style=for-the-badge&logo=vercel&logoColor=black&labelColor=fff)](https://dictionary-web-app-thefabi8a.vercel.app/)
+[![Vercel](https://img.shields.io/badge/site_live-000?style=for-the-badge&logo=vercel&logoColor=black&labelColor=fff)](https://audio-lexicon.vercel.app/)
 
 [![FrontendMentor](https://img.shields.io/badge/solution_(_not_available_)-f00?style=for-the-badge&logo=frontendmentor&logoColor=white&labelColor=101010)]()
 
