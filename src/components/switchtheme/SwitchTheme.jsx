@@ -31,9 +31,13 @@ const SwitchCheckBox = styled.input`
   }
 `;
 
-const SwitchTheme = (props) => {
+export default function SwitchTheme({ theme, ...props }) {
   return (
-    <SwitchContainer htmlFor="switch-theme">
+    <SwitchContainer
+      htmlFor="switch-theme"
+      title={
+        theme === "dark" ? "Activated light theme" : "Activated dark theme"
+      }>
       <SwitchCheckBox
         {...props}
         type="checkbox"
@@ -43,6 +47,4 @@ const SwitchTheme = (props) => {
       <SwitchLabel />
     </SwitchContainer>
   );
-};
-
-export default SwitchTheme;
+}

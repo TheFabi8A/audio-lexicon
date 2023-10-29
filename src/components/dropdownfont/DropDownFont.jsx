@@ -24,10 +24,12 @@ const DropDownTrigger = styled.button`
 `;
 
 const DropDownMenu = styled.ul`
+  display: block;
   position: absolute;
   z-index: 10;
   background-color: ${({ theme }) => theme.bodyColor};
-  transition: background 250ms ease-in-out;
+  transition: background 250ms ease-in-out, transform 150ms ease-in-out;
+  transform-origin: top right;
   top: 3.5rem;
   right: 0;
   list-style: none;
@@ -77,41 +79,52 @@ const DropDownFont = () => {
     <>
       <DropDown>
         <DropDownTrigger
-          title={`${isMenuOpen ? "Ocultar" : "Mostrar"} opciones de fuente`}
+          title={`${isMenuOpen ? "Hidde" : "View"} font family menu`}
           onClick={handleTrigger}>
           {selectedFont === "--font-family-lora" && "Serif"}
           {selectedFont === "--font-family-inter" && "Sans Serif"}
           {selectedFont === "--font-family-inconsolata" && "Monospace"}
-          <ArrowDownIcon />
+          <ArrowDownIcon
+            style={
+              isMenuOpen
+                ? { transform: "rotate(90deg)" }
+                : { transform: "rotate(0deg)" }
+            }
+          />
         </DropDownTrigger>
-        {isMenuOpen && (
-          <DropDownMenu title="Opciones de cambio de fuente">
-            <li>
-              <DropDownItem
-                style={{ fontFamily: "Lora Regular" }}
-                value="Serif"
-                onClick={() => handleFontChange("--font-family-lora")}>
-                Serif
-              </DropDownItem>
-            </li>
-            <li>
-              <DropDownItem
-                style={{ fontFamily: "Inter Regular" }}
-                value="Sans Serif"
-                onClick={() => handleFontChange("--font-family-inter")}>
-                Sans Serif
-              </DropDownItem>
-            </li>
-            <li>
-              <DropDownItem
-                style={{ fontFamily: "Inconsolata Regular" }}
-                value="Monospace"
-                onClick={() => handleFontChange("--font-family-inconsolata")}>
-                Monospace
-              </DropDownItem>
-            </li>
-          </DropDownMenu>
-        )}
+        <DropDownMenu
+          title="Change font family"
+          style={
+            isMenuOpen ? { transform: "scale(1)" } : { transform: "scale(0)" }
+          }>
+          <li>
+            <DropDownItem
+              title="Change font family to Serif"
+              style={{ fontFamily: "Lora Regular" }}
+              value="Serif"
+              onClick={() => handleFontChange("--font-family-lora")}>
+              Serif
+            </DropDownItem>
+          </li>
+          <li>
+            <DropDownItem
+              title="Change font to Sans Serif"
+              style={{ fontFamily: "Inter Regular" }}
+              value="Sans Serif"
+              onClick={() => handleFontChange("--font-family-inter")}>
+              Sans Serif
+            </DropDownItem>
+          </li>
+          <li>
+            <DropDownItem
+              title="Change font to Monospace"
+              style={{ fontFamily: "Inconsolata Regular" }}
+              value="Monospace"
+              onClick={() => handleFontChange("--font-family-inconsolata")}>
+              Monospace
+            </DropDownItem>
+          </li>
+        </DropDownMenu>
       </DropDown>
     </>
   );

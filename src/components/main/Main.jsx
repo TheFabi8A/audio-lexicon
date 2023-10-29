@@ -190,11 +190,14 @@ export default function Main() {
   return (
     <>
       {dataWord.length > 0 && (
-        <MainContainer style={{ fontFamily: `var(${selectedFont})` }}>
+        <MainContainer
+          style={{
+            fontFamily: `var(${selectedFont})`,
+          }}>
           <audio ref={audioRef} />
           <section>
             <HeaderSection>
-              <div>
+              <header>
                 <h1>{word}</h1>
                 <em
                   style={{
@@ -206,76 +209,73 @@ export default function Main() {
                   }}>
                   {phonetic}
                 </em>
-              </div>
-              <PlayButton onClick={handleTextToSpeech}>
+              </header>
+              <PlayButton title="Play sound" onClick={handleTextToSpeech}>
                 <PlayIcon style={{ width: "100%", height: "100%" }} />
               </PlayButton>
             </HeaderSection>
-            {dataWord[0].meanings.map((meaning, index) => (
-              <>
-                <article key={index}>
-                  <HeaderArticle>
-                    <h2
-                      style={{
-                        fontFamily: `${
-                          selectedFont ? `var(${selectedFont}-bold)` : ""
-                        }`,
-                      }}>
-                      {meaning.partOfSpeech}
-                    </h2>
-                    <Divider />
-                  </HeaderArticle>
-                  <h3>Meaning</h3>
-                  <MeaningsList>
-                    {meaning.definitions.map((definition, index) => (
-                      <li key={index}>{definition.definition}</li>
-                    ))}
-                  </MeaningsList>
-                  {meaning.synonyms.length > 0 ||
-                  meaning.antonyms.length > 0 ? (
-                    <FooterArticle>
-                      {meaning.synonyms.length > 0 && (
-                        <>
-                          <div>
-                            <h3>Synonyms</h3>
-                            <ThesaurusList>
-                              {meaning.synonyms.map((synonym, index) => (
-                                <li key={index}>
-                                  <a
-                                    href={`https://en.wiktionary.org/wiki/${synonym}`}
-                                    target="_blank"
-                                    rel="noopener noreferrer">
-                                    {synonym}
-                                  </a>
-                                </li>
-                              ))}
-                            </ThesaurusList>
-                          </div>
-                        </>
-                      )}
-                      {meaning.antonyms.length > 0 && (
-                        <>
-                          <div>
-                            <h3>Antonyms</h3>
-                            <ThesaurusList>
-                              {meaning.antonyms.map((antonym, index) => (
-                                <li key={index}>
-                                  <a
-                                    href={`https://en.wiktionary.org/wiki/${antonym}`}
-                                    target="_blank"
-                                    rel="noopener noreferrer">
-                                    {antonym}
-                                  </a>
-                                </li>
-                              ))}
-                            </ThesaurusList>
-                          </div>
-                        </>
-                      )}
-                    </FooterArticle>
-                  ) : null}
-                </article>
-              </>
+            {dataWord[0].meanings.map((meaning) => (
+              <article key={meaning.partOfSpeech}>
+                <HeaderArticle>
+                  <h2
+                    style={{
+                      fontFamily: `${
+                        selectedFont ? `var(${selectedFont}-bold)` : ""
+                      }`,
+                    }}>
+                    {meaning.partOfSpeech}
+                  </h2>
+                  <Divider />
+                </HeaderArticle>
+                <h3>Meaning</h3>
+                <MeaningsList>
+                  {meaning.definitions.map((definition) => (
+                    <li key={definition.definition}>{definition.definition}</li>
+                  ))}
+                </MeaningsList>
+                {meaning.synonyms.length > 0 || meaning.antonyms.length > 0 ? (
+                  <FooterArticle>
+                    {meaning.synonyms.length > 0 && (
+                      <>
+                        <div>
+                          <h3>Synonyms</h3>
+                          <ThesaurusList>
+                            {meaning.synonyms.map((synonym) => (
+                              <li key={synonym}>
+                                <a
+                                  href={`https://en.wiktionary.org/wiki/${synonym}`}
+                                  target="_blank"
+                                  rel="noopener noreferrer">
+                                  {synonym}
+                                </a>
+                              </li>
+                            ))}
+                          </ThesaurusList>
+                        </div>
+                      </>
+                    )}
+                    {meaning.antonyms.length > 0 && (
+                      <>
+                        <div>
+                          <h3>Antonyms</h3>
+                          <ThesaurusList>
+                            {meaning.antonyms.map((antonym) => (
+                              <li key={antonym}>
+                                <a
+                                  href={`https://en.wiktionary.org/wiki/${antonym}`}
+                                  target="_blank"
+                                  rel="noopener noreferrer">
+                                  {antonym}
+                                </a>
+                              </li>
+                            ))}
+                          </ThesaurusList>
+                        </div>
+                      </>
+                    )}
+                  </FooterArticle>
+                ) : null}
+              </article>
             ))}
             <Divider />
             <FooterSection>

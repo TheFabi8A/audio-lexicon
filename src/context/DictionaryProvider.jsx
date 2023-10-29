@@ -4,9 +4,11 @@ import useFetch from "../hooks/useFetch";
 export const DictionaryContext = createContext();
 
 export default function DictionaryProvider({ children }) {
-  const [word, setWord] = useState(localStorage.getItem("word") || "");
-  const { dataWord, errorFetch } = useFetch(word);
-  const [queryInput, setQueryInput] = useState("");
+  const [word, setWord] = useState(localStorage.getItem("word") || "developer");
+  const { dataWord, errorFetch, isLoading } = useFetch(word);
+  const [queryInput, setQueryInput] = useState(
+    localStorage.getItem("word") || "developer"
+  );
 
   const [selectedFont, setFont] = useState(
     localStorage.getItem("selectedFont") || "--font-family-lora"
@@ -31,6 +33,7 @@ export default function DictionaryProvider({ children }) {
         queryInput,
         setQueryInput,
         errorFetch,
+        isLoading,
       }}>
       {children}
     </DictionaryContext.Provider>

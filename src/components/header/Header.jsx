@@ -1,9 +1,13 @@
-import { LogoIcon, MoonIcon, SearchIcon } from "../icons";
-import styled from "styled-components";
-import SwitchTheme from "../switchtheme/SwitchTheme";
-import DropDownFont from "../dropdownfont/DropDownFont";
 import { useContext, useState } from "react";
+
+import styled from "styled-components";
+
+import { MoonIcon, SearchIcon } from "../icons";
+
+import { SwitchTheme } from "../switchtheme";
+import DropDownFont from "../dropdownfont/DropDownFont";
 import { DictionaryContext } from "../../context/DictionaryProvider";
+import Loader from "../Loader/Loader";
 
 const HeaderContainer = styled.header`
   margin: 0 auto;
@@ -78,9 +82,25 @@ const ErrorMessage = styled.span`
   font-size: smaller;
 `;
 
+const Logo = styled.img`
+  object-fit: scale-down;
+`;
+
+const NavbarBrand = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+`;
+
 export default function Header({ theme, themeToggler }) {
-  const { queryInput, setQueryInput, setWord, dataWord, selectedFont } =
-    useContext(DictionaryContext);
+  const {
+    queryInput,
+    setQueryInput,
+    setWord,
+    dataWord,
+    selectedFont,
+    isLoading,
+  } = useContext(DictionaryContext);
   const [errorMessage, setErrorMessage] = useState("");
   const [typingTimeout, setTypingTimeout] = useState(null);
 
@@ -112,20 +132,32 @@ export default function Header({ theme, themeToggler }) {
     <HeaderContainer style={{ fontFamily: `var(${selectedFont})` }}>
       <Navbar>
         <NavbarContent>
-          <a href="/">
-            <LogoIcon />
-          </a>
+          <NavbarBrand>
+            <Logo
+              width="36"
+              height="36"
+              src="assets/img/logo.png"
+              alt="Flat design image of an open book with a purple cover and bookmark. The book is open to a page with purple lines and an orange square. A pencil rests on the bottom right corner of the book."
+            />
+            {isLoading && <Loader />}
+          </NavbarBrand>
           <NavbarContent>
             <DropDownFont />
             <Divider />
-            <SwitchTheme
-              checked={theme === "dark" ? true : false}
-              onChange={() => themeToggler()}
-            />
-            <MoonIcon />
+            <NavbarContent>
+              <SwitchTheme
+                theme={theme}
+                checked={theme === "dark" ? true : false}
+                onChange={() => themeToggler()}
+              />
+              <MoonIcon />
+            </NavbarContent>
           </NavbarContent>
         </NavbarContent>
-        <SearchContainer className="label-search" htmlFor="search-input">
+        <SearchContainer
+          title="Search for a word"
+          className="label-search"
+          htmlFor="search-input">
           <SearchIcon />
           <InputSearch
             onBlur={onBlurInput}
