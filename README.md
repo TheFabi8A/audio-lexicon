@@ -28,8 +28,8 @@ Your users should be able to:
 
 ### Screenshots
 
-![](/screenshot-dark.png)
-![](/screenshot-light.png)
+![https://github.com/TheFabi8A/audio-lexicon](https://github.com/TheFabi8A/audio-lexicon/blob/main/public/screenshot-dark.png)
+![https://github.com/TheFabi8A/audio-lexicon](https://github.com/TheFabi8A/audio-lexicon/blob/main/public/screenshot-light.png)
 
 ### Links
 
